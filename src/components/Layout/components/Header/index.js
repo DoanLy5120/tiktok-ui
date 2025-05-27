@@ -1,9 +1,10 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faMagnifyingGlass, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark, faMagnifyingGlass, faSignIn, faSpinner } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
 
+import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import { href } from 'react-router-dom';
 import image from '~/assets/image';
@@ -54,7 +55,10 @@ function Header() {
                         </button>
                     </div>
                 </Tippy>
-                <div className={cx('action')}></div>
+                <div className={cx('action')}>
+                    <Button text>Upload</Button>
+                    <Button primary>Log In</Button>
+                </div>
             </div>
         </header>
     );
