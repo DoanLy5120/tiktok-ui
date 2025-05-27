@@ -38,6 +38,7 @@ function Button({
         delete props.onClick;
     }
 
+    //tạo class css cho các nút 
     const classes = cx('wrapper', {
         primary,
         text,
